@@ -38,7 +38,7 @@ class AttackShip extends Ship{
 
 class DefenceShip extends Ship{
     constructor() {
-        super("Attack Ship", 80, 10)
+        super("Defence Ship", 80, 10)
     }
 }
 
@@ -48,8 +48,8 @@ let alienShipArray = [];
 
 const numOfMotherShips = 1
 const numOfAttackShips = 8
-const numOfDefenseShips = 5
-const totalAlienShips = numOfAttackShips + numOfAttackShips + numOfDefenseShips;
+const numOfDefenceShips = 5
+const totalAlienShips = numOfAttackShips + numOfAttackShips + numOfDefenceShips;
 
 for (let i = 0; i < totalAlienShips; i++){
 
@@ -67,9 +67,20 @@ for (let i = 0; i < totalAlienShips; i++){
         newDefenceShip = new DefenceShip();
         alienShipArray.push(newDefenceShip);
     }
+}
 
+const populateHTML = () => {
+    shipContainer.innerHTML = "";
 
+    alienShipArray.forEach(ship => {
+        const alienShipDiv = document.createElement("div")
+        const alienShipName = document.createElement("p")
+        const alienShipHP = document.createElement("p")
 
+        shipContainer.appendChild(alienShipDiv)
+        alienShipDiv.appendChild(alienShipName)
+        alienShipDiv.appendChild(alienShipHP)
+    })
 }
 
 // const ship1 = new Ship ("Attack Ship 1",10,4)

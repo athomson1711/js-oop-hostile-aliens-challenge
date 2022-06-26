@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Hotsile Aliens - OOP Challenge</title>
+    <title>Hostile Aliens - OOP Challenge</title>
 </head>
 <body>
-    <div class = "ship-container"></div>
-    <button class = "fire-button">Fire!</button>
-    <button class = "reset-game">Reset</button>
+    <div class ="grid-area">
+        <div class = "ship-container"></div>
+        <div class = "interface-container">
+            <button class = "fire-button">FIRE!</button>
+            <h3 class ="damage-alert-box">Welcome - Press New Game to begin</h3>
+            <button class = "new-game-button">New Game</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
